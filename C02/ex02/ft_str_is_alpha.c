@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 20:49:01 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 21:41:06 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/24 21:58:37 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/24 22:25:11 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
 
 	i = -1;
-	while (src[++i] != '\0')
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	while (str[++i])
+	{
+		if (!((str[i] >= 65 && str[i] <= 90)
+				|| (str[i] >= 97 && str[i] <= 122)))
+			return (0);
+	}
+	return (1);
 }

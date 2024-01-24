@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 20:49:01 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 21:41:06 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/24 22:11:51 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/24 22:11:52 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
+#include <stdio.h>
 
-	i = -1;
-	while (src[++i] != '\0')
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+int	ft_str_is_alpha(char *str);
+
+int	main(void)
+{
+	char	*str;
+
+	str = "TEStKSADJALSD";
+	printf("%i", ft_str_is_alpha(str));
+	return (0);
 }
