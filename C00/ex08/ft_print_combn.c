@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:43:58 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 02:43:58 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/24 01:07:23 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/24 01:07:23 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 
-void	ft_ultimate_div_mod(int *a, int *b)
+void	ft_print_combn(int n)
 {
-	int	c;
+	int	i;
 
-	c = *a;
-	*a = c / *b;
-	*b = c % *b;
+	i = -1;
+	while (++i <= n)
+	{
+		if (val1 > val2)
+	}
 }

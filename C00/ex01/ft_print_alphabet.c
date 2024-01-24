@@ -12,9 +12,9 @@
 
 #include <unistd.h>
 
-void    ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	int i;
+	int	i;
 
 	i = 96;
 	while (++i <= 122)
