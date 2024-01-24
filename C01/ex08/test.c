@@ -5,25 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 01:44:07 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 03:17:06 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/24 02:52:35 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/24 03:06:23 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
-void	ft_ultimate_div_mod(int *a, int *b);
+void	ft_sort_int_tab(int *tab, int size);
 
 int	main(void)
 {
-	int	a;
-	int	b;
+	int	*tab;
+	int	i;
+	int	size;
 
-	a = 250;
-	b = 10;
-	printf("in -> a = %i b = %i\n", a, b);
-	ft_ultimate_div_mod(&a, &b);
-	printf("out -> a = %i b = %i\n", a, b);
+	size = 10;
+	tab = malloc (size * sizeof(int));
+	srand(time(NULL));
+	i = -1;
+	while (++i < size)
+		tab[i] = rand() % 101;
+	i = 0;
+	printf("in -> %i", tab[i]);
+	while (++i < size)
+		printf(", %i", tab[i]);
+	printf("\n");
+	ft_sort_int_tab(tab, size);
+	i = 0;
+	printf("out -> %i", tab[i]);
+	while (++i < size)
+		printf(", %i", tab[i]);
+	printf("\n");
+	free(tab);
 	return (0);
 }

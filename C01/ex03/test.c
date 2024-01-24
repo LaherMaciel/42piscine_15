@@ -6,7 +6,7 @@
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 01:44:07 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 02:45:43 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/24 03:16:00 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 
 	a = 250;
 	b = 10;
-	ft_ultimate_div_mod(a, b, &div, &mod);
-	printf("a = %i b = %i\ndiv = %i mod = %i", a, b, div, mod);
+	ft_div_mod(a, b, &div, &mod);
+	printf("a = %i b = %i\ndiv = %i mod = %i\n", a, b, div, mod);
 	return (0);
 }
