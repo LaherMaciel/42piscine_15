@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 01:07:23 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 01:07:23 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/24 12:53:50 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/24 12:53:50 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ void	ft_print_combn(int n)
 	while (++i <= n)
 	{
 		if (val1 > val2)
+			break ;
 	}
 }
