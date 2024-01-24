@@ -1,0 +1,1 @@
+gcc -Wall -Wextra -Werror -fsanitize=address *.c && ./a.out
