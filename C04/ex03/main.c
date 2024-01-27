@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:48:09 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:35 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 23:07:03 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/27 23:10:20 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
-{
-	int	i;
-	int	j;
-	int	k;
+#include <stdio.h>
+#include <stdlib.h>
 
-	i = -1;
-	while (++i < size)
-	{
-		j = i;
-		while (++j < size)
-		{
-			if (tab[i] < tab[j])
-			{
-				k = tab[i];
-				tab[i] = tab[j];
-				tab[j] = k;
-			}
-		}
-	}
+int	ft_atoi(char *str);
+
+int main(void)
+{
+	printf("%i\n", ft_atoi("---+--+1234ab567"));
+	return (0);
 }

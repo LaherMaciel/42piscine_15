@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:48:09 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:35 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/25 15:39:57 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/25 20:45:17 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
-	int	j;
-	int	k;
 
 	i = -1;
-	while (++i < size)
+	while (str[++i])
 	{
-		j = i;
-		while (++j < size)
-		{
-			if (tab[i] < tab[j])
-			{
-				k = tab[i];
-				tab[i] = tab[j];
-				tab[j] = k;
-			}
-		}
+		if (!(str[i] >= 97 && str[i] <= 122))
+			return (0);
 	}
+	return (1);
 }

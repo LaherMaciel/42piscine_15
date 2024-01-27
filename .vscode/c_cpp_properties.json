@@ -9,6 +9,8 @@
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "linux-gcc-x64",
+      "editor.tabSize": 4,
+      "editor.insertSpaces": false,
       "compilerArgs": [
         ""
       ]

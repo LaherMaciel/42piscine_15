@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:48:09 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:35 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 18:00:02 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/27 21:49:43 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
-	int	k;
+	unsigned int	i;
+	unsigned int	j;
 
-	i = -1;
-	while (++i < size)
+	i = 0;
+	while (dest[i])
+		i++;
+	j = -1;
+	while (src[++j] && j < nb)
 	{
-		j = i;
-		while (++j < size)
-		{
-			if (tab[i] < tab[j])
-			{
-				k = tab[i];
-				tab[i] = tab[j];
-				tab[j] = k;
-			}
-		}
+		dest[i] = src[j];
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }

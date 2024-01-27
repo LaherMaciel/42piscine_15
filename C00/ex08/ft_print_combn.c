@@ -20,7 +20,6 @@ void	ft_print_combn(int n)
 	i = -1;
 	while (++i <= n)
 	{
-		if (val1 > val2)
-			break ;
+		
 	}
 }

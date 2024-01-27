@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 12:53:36 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/24 12:53:36 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/25 20:26:26 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/25 20:26:29 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,17 @@ void	ft_putnbr(int nb)
 	int	i;
 
 	i = 0;
+	if (nb <= -2147483648)
+	{
+		write (1, "-2", 2);
+		ft_putnbr(147483648);
+		return ;
+	}
+	else if (nb < 0)
+	{
+		write (1, "-", 1);
+		nb = -nb;
+	}
 	if (nb < 10)
 	{
 		nb += 48;

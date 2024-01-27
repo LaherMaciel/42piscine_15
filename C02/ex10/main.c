@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:48:09 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:35 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 21:05:04 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/27 21:37:11 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
-{
-	int	i;
-	int	j;
-	int	k;
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-	i = -1;
-	while (++i < size)
-	{
-		j = i;
-		while (++j < size)
-		{
-			if (tab[i] < tab[j])
-			{
-				k = tab[i];
-				tab[i] = tab[j];
-				tab[j] = k;
-			}
-		}
-	}
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+
+int main(void)
+{
+	char src[] = "1234567890";
+	char dest[1000];
+	unsigned int copied_len;
+
+	copied_len = ft_strlcpy(dest, src, 6);
+	printf("%s\n", dest);
+	printf("Length of copied string: %u\n", copied_len);
+	return (0);
 }

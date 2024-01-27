@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:48:09 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:35 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 22:30:42 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/27 23:09:53 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+int	ft_atoi(char *str)
 {
-	int	i;
-	int	j;
-	int	k;
-
-	i = -1;
-	while (++i < size)
+	int i;
+	int	sign;
+	int	val;
+	
+	i = 0;
+	sign = 1;
+	val = 0;
+	while (str[i] <= 13 || str[i] == 32)
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		j = i;
-		while (++j < size)
-		{
-			if (tab[i] < tab[j])
-			{
-				k = tab[i];
-				tab[i] = tab[j];
-				tab[j] = k;
-			}
-		}
+		if (str[i] == '-')
+			sign = sign * (-1);
+		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		val = val * 10;
+		val = val + (str[i] - '0');
+		i++;
+	}
+	val = val * sign;
+	return (val);
 }

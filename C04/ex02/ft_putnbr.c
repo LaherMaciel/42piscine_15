@@ -1,52 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 12:53:28 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/25 20:36:43 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 22:29:08 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/27 22:29:21 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	putsmallnbr(int i)
+void	ft_putnbr(int nb)
 {
-	char	k;
+	int	i;
 
-	if (i < 10)
+	i = 0;
+	if (nb <= -2147483648)
 	{
-		k = i + '0';
-		write (1, "0", 1);
-		write (1, &k, 1);
+		write (1, "-2", 2);
+		ft_putnbr(147483648);
+		return ;
+	}
+	else if (nb < 0)
+	{
+		write (1, "-", 1);
+		nb = -nb;
+	}
+	if (nb < 10)
+	{
+		nb += 48;
+		write (1, &nb, 1);
 	}
 	else
 	{
-		k = i / 10 + '0';
-		write (1, &k, 1);
-		k = i % 10 + '0';
-		write (1, &k, 1);
-	}
-}
-
-void	ft_print_comb2(void)
-{
-	int	i;
-	int	j;
-
-	i = -1;
-	while (++i <= 98)
-	{
-		j = i;
-		while (++j <= 99)
-		{
-			putsmallnbr(i);
-			write (1, " ", 1);
-			putsmallnbr(j);
-			if (!(i == 98 && j == 99))
-				write (1, ", ", 2);
-		}
+		ft_putnbr(nb / 10);
+		i = (nb % 10) + 48;
+		write (1, &i, 1);
 	}
 }

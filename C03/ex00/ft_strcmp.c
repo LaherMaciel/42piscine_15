@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 02:48:09 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:05:35 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 13:38:42 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/27 18:00:48 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	j;
-	int	k;
-
-	i = -1;
-	while (++i < size)
+	
+	i = 0;
+	while (s2[i] || s1[i])
 	{
-		j = i;
-		while (++j < size)
-		{
-			if (tab[i] < tab[j])
-			{
-				k = tab[i];
-				tab[i] = tab[j];
-				tab[j] = k;
-			}
-		}
+		if (s1[i] < s2[i])
+			return (-1);
+		if (s1[i] > s2[i])
+			return (1);
+		i++;
 	}
+	return (0);
 }
