@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 22:30:42 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:09:53 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/28 12:30:03 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int i;
+	int	i;
 	int	sign;
 	int	val;
-	
+
 	i = 0;
 	sign = 1;
 	val = 0;

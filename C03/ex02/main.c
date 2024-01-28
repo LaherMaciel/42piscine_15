@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:49:13 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 21:48:51 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/28 12:27:58 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *ft_strcat(char *dest, char *src);
+char	*ft_strcat(char *dest, char *src);
 
-int main(void)
+int	main(void)
 {
-	char *src;
-	char *dest;
+	char	*src;
+	char	*dest;
 
 	src = malloc(1000 * sizeof(char));
 	dest = malloc(1000 * sizeof(char));
-	if (src == NULL || dest == NULL) {
+	if (src == NULL || dest == NULL)
+	{
 		fprintf(stderr, "Memory allocation failed\n");
-		return 1;
+		return (1);
 	}
 	strcpy(src, "SRC INFO");
 	strcpy(dest, "DEST INFO");
@@ -33,6 +34,5 @@ int main(void)
 	printf("%s\n", dest);
 	free(src);
 	free(dest);
-
-	return 0;
+	return (0);
 }

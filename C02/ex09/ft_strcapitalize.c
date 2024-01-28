@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 16:12:27 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 21:30:38 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/28 12:23:29 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strlowcase(char *str)
 	return (str);
 }
 
-char *ft_strcapitalize(char *str)
+char	*ft_strcapitalize(char *str)
 {
 	int		i;
 	int		upper;

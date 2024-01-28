@@ -3,19 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:11:02 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 23:41:08 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:24:52 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
+
+void	ft_putnbr_base(long nbr, char *base);
 
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	
+
 	i = 0;
 	while (s2[i] || s1[i])
 	{
@@ -39,26 +42,39 @@ int	check_base(char *base)
 		return (i);
 	if (i == 16 && ft_strcmp(base, "0123456789ABCDEF") == 0)
 		return (i);
-	if (i == 1 && ft_strcmp(base, "01") == 0)
+	if (i == 2 && ft_strcmp(base, "01") == 0)
 		return (i);
 	if (i == 8 && ft_strcmp(base, "poneyvif") == 0)
 		return (i);
 	return (0);
 }
 
-void ft_putnbr_base(int nbr, char *base)
+int	base_int_min(long nbr, int len, char *base, char to_print)
 {
-	int		i;
+	if (nbr == 2147483648)
+	{
+		ft_putnbr_base((nbr / len), base);
+		to_print = base[(nbr % len)];
+		write(1, &to_print, 1);
+		return (1);
+	}
+	return (0);
+}
+
+void	ft_putnbr_base(long nbr, char *base)
+{
 	int		len;
 	char	to_print;
 
-	i = 0;
 	len = check_base(base);
 	if (len == 0)
 		return ;
 	if (nbr < 0)
 	{
+		write(1, "-", 1);
 		nbr = -nbr;
+		if (base_int_min(nbr, len, base, to_print) == 1)
+			return ;
 	}
 	if (nbr < len)
 	{

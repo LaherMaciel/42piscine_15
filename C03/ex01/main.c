@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 13:51:59 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 17:41:30 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/28 12:26:12 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int ft_strncmp(char *s1, char *s2, unsigned int n);
+int	ft_strncmp(char *s1, char *s2, unsigned int n);
 
 int	main(void)
 {

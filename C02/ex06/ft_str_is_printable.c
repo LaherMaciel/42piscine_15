@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 20:47:42 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/27 13:28:28 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/28 12:23:09 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_str_is_alpha(char *str)
 {
