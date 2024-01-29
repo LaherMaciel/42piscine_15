@@ -6,7 +6,7 @@
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:10:10 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 16:39:47 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/29 01:54:08 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	ft_atoi_base(char *str, char *base)
 			if (str[i] == base[j])
 			{
 				val = val * 10;
-				val = val + (str[i] - base[j]);
+				val = val + j;
 			}
 		}
 		i++;
