@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 23:07:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 16:24:57 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/28 16:56:20 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/28 17:00:00 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_atoi(char *str);
-
-int	main(void)
+int	ft_iterative_power(int nb, int power)
 {
-	printf("%i\n", ft_atoi("---+--+1234ab567"));
-	return (0);
+	int	i;
+	int	val;
+
+	if (power < 0)
+		return (0);
+	if (nb == 0 && power == 0)
+		return (1);
+	i = -1;
+	val = nb;
+	while (++i < power)
+		nb *= val;
+	return (nb);
 }

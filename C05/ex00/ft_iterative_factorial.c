@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 23:07:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 16:24:57 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/28 16:43:50 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/28 17:00:12 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_atoi(char *str);
-
-int	main(void)
+int	ft_iterative_factorial(int nb)
 {
-	printf("%i\n", ft_atoi("---+--+1234ab567"));
-	return (0);
+	int	i;
+
+	if (nb < 0)
+		return (0);
+	i = nb + 1;
+	while (--i > 0)
+		nb *= i;
+	return (nb);
 }

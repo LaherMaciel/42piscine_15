@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 23:07:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 16:24:57 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/28 16:49:40 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/28 16:55:39 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_atoi(char *str);
-
-int	main(void)
+int	ft_recursive_factorial(int nb)
 {
-	printf("%i\n", ft_atoi("---+--+1234ab567"));
-	return (0);
+	if (nb < 0)
+		return (0);
+	else if (nb == 0)
+		return (1);
+	return (nb * ft_recursive_factorial(nb - 1));
 }

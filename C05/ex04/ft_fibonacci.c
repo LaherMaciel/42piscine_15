@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 23:07:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 16:24:57 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/28 17:09:21 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/28 17:31:37 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_atoi(char *str);
-
-int	main(void)
+int	ft_fibonacci(int index)
 {
-	printf("%i\n", ft_atoi("---+--+1234ab567"));
-	return (0);
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
