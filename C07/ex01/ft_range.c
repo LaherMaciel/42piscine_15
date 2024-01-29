@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 20:47:42 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/29 17:01:55 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/29 11:21:22 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/29 11:28:33 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+#include <stdlib.h>
+
+int	*ft_range(int min, int max)
 {
 	int	i;
+	int	j;
+	int	*array;
 
-	i = -1;
-	while (str[++i])
+	if (min >= max)
+		return (NULL);
+	array = malloc((max - min) * sizeof(int));
+	if (!array)
+		return (NULL);
+	i = min - 1;
+	j = 0;
+	while (++i < max)
 	{
-		if (!(str[i] > 32 && str[i] < 127))
-			return (0);
+		array[j] = i;
+		j++; 
 	}
-	return (1);
+	return (array);
 }

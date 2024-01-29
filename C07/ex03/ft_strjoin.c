@@ -1,24 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 20:47:42 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/29 17:01:55 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/29 14:29:40 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/29 19:20:30 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+#include <stdlib.h>
+
+int	find_sizeof_join(char **strs)
 {
 	int	i;
+	int	j;
+	int	size;
 
-	i = -1;
-	while (str[++i])
+	i = 0;
+	while (strs[i])
 	{
-		if (!(str[i] > 32 && str[i] < 127))
-			return (0);
+		j = 0;
+		while (strs[i][j])
+		{
+			size++;
+			j++;
+		}
+		size++;
+		i++;
 	}
-	return (1);
+	size++;
+	return (size);
+}
+
+char *ft_strjoin(int size, char **strs, char *sep)
+{
+	int	i;
+	int	j;
+	char	*join;
+
+	join = (char *) malloc(find_sizeof_join(strs) * sizeof(char));
+	i = 0;
+	while (strs[i])
+	{
+		
+	}
 }

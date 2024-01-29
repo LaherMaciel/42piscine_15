@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:10:10 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/29 01:54:08 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:10:46 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ int	check_base(char *base)
 	return (i);
 }
 
+int	add_to_val(int j, int base_len, int val)
+{
+	val = val * base_len;
+	val = val + j;
+	return (val);
+}
+
 int	ft_atoi_base(char *str, char *base)
 {
 	int	i;
@@ -56,10 +63,7 @@ int	ft_atoi_base(char *str, char *base)
 		while (base[++j])
 		{
 			if (str[i] == base[j])
-			{
-				val = val * 10;
-				val = val + j;
-			}
+				val = add_to_val(j, base_len, val);
 		}
 		i++;
 	}
