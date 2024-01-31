@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 11:21:22 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/30 20:09:32 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 13:51:59 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/30 21:24:06 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int	*ft_range(int min, int max)
+int	ft_strcmp(char *s1, char *s2);
+
+int	main(void)
 {
-	int	i;
-	int	j;
-	int	*array;
-
-	if (min >= max)
-		return (NULL);
-	array = malloc((max - min) * sizeof(int));
-	if (!array)
-		return (NULL);
-	i = min - 1;
-	j = 0;
-	while (++i < max)
-	{
-		array[j] = i;
-		j++;
-	}
-	return (array);
+	printf("%i\n", strcmp("1234", "12345"));
+	printf("%i\n", ft_strcmp("1234", "12345"));
+	return (0);
 }

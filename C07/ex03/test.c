@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 11:21:22 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/30 20:09:32 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/29 19:52:28 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/30 20:09:44 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+char	*ft_strjoin(int size, char **strs, char *sep);
 
-int	*ft_range(int min, int max)
+int	main(void)
 {
-	int	i;
-	int	j;
-	int	*array;
-
-	if (min >= max)
-		return (NULL);
-	array = malloc((max - min) * sizeof(int));
-	if (!array)
-		return (NULL);
-	i = min - 1;
-	j = 0;
-	while (++i < max)
-	{
-		array[j] = i;
-		j++;
-	}
-	return (array);
+	return (0);
 }
