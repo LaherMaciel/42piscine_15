@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 20:29:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/29 11:11:22 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:01:43 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,47 @@ int	ft_strcmp(char *s1, char *s2)
 			return (1);
 		i++;
 	}
+	return (0);
+}
+
+int	find_next_smallest(char **argv, int smallest)
+{
+	int	current_min;
+	int	next_smallest;
+
+	next_smallest = 0;
+	current_min = 0;
+	while (argv[++current_min])
+	{
+		if (ft_strcmp(argv[next_smallest], argv[current_min]) == 1
+				&& ft_strcmp(argv[current_min], argv[smallest] == -1))
+		{
+			next_smallest = current_min;
+		}
+	}
+	return (next_smallest);
+}
+
+int	find_smallest(char **argv)
+{
+	int	current_min;
+	int	smallest;
+
+	smallest = 0;
+	current_min = 0;
+	while (argv[++current_min])
+	{
+		if (ft_strcmp(argv[smallest], argv[current_min]) == 1)
+			smallest = current_min;
+	}
+	return (smallest);
+}
+
+int	sort_order(char **argv)
+{
+	int	i;
+
+	i = 0;
 	return (0);
 }
 

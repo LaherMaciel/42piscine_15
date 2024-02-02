@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 22:07:49 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/29 17:53:51 by lawences         ###   ########.fr       */
+/*   Updated: 2024/01/31 20:28:05 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (i + size);
 	}
 	j = -1;
-	while (src[++j] && j < size - j - 1)
+	while (src[++j] && i < size - 1)
 	{
 		dest[i] = src[j];
 		i++;

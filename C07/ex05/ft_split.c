@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 21:53:50 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/31 00:30:18 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:13:47 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,28 +39,28 @@ char	**ft_splitter(char *str, char c, char **splitted)
 {
 	int	str_index;
 	int	next_c;
-	int	split_i;
-	int	splitted_j;
+	int	i;
+	int	j;
 
 	str_index = ft_skip_or_find_c(str, c, 0, 0);
-	split_i = 0;
+	i = 0;
 	while (str[str_index])
 	{
 		next_c = ft_skip_or_find_c(str, c, str_index, 1);
-		splitted[split_i] = (char *) malloc((next_c
+		splitted[i] = (char *) malloc((next_c
 					- str_index + 1) * sizeof(char));
-		if (!splitted[split_i])
+		if (!splitted[i])
 			return (NULL);
-		splitted_j = 0;
+		j = 0;
 		while ((str[str_index] != c) && str[str_index])
 		{
-			splitted[split_i][splitted_j++] = str[str_index];
+			splitted[i][j++] = str[str_index];
 			str_index++;
 		}
-		splitted[split_i][splitted_j] = '\0';
+		splitted[i][j] = '\0';
 		str_index = ft_skip_or_find_c(str, c, str_index, 0);
 	}
-	splitted[split_i++] = NULL;
+	splitted[i++] = NULL;
 	return (splitted);
 }
 

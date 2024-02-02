@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 21:50:25 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/01 17:38:48 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/01 17:33:32 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/01 17:42:27 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	int	i;
-	int	j;
+#include <stdio.h>
 
-	i = -1;
-	j = 0;
-	while (str[++i])
-	{
-		while (str[i + j] == to_find[j] && str[i + j])
-			j++;
-		if (to_find[j] == '\0')
-			return (str + i);
-		j = 0;
-	}
-	return ('\0');
+char	*ft_strstr(char *str, char *to_find);
+
+int	main(void)
+{
+	char	*str;
+	char	*to_find;
+
+	str = "Nos va vamos sair;";
+	to_find = "vamos";
+	printf("%s\n", ft_strstr(str, to_find));
+	return (0);
 }
