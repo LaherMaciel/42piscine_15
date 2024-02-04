@@ -6,12 +6,11 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:01:33 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/04 00:40:31 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/04 03:33:19 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str);
-int	find_index_linha(int	val, int **array, int linha);
 
 int	fill_linha_start_4(int **array)
 {
@@ -78,6 +77,7 @@ int	fill_coluna_start_4(int **array)
 	}
 	return (array);
 }
+/* 
 									   |
 linha ->						coluna v
 X	|	3	1	4	2	|	X
@@ -87,4 +87,4 @@ X	|	3	1	4	2	|	X
 2	|	0	0	0	0	|	2
 1	|	0	0	0	0	|	2
 ----|-------------------|-----
-X	|	1	3	2	2	|	X
+X	|	1	3	2	2	|	X */

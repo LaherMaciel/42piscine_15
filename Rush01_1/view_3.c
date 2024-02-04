@@ -6,9 +6,11 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:44:49 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/04 01:46:02 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/04 03:33:00 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_strlen(char *str);
 
 // !linha
 int	*fill_linha_val4_3_stare_2(int **array)

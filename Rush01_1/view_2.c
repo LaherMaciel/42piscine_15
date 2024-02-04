@@ -6,9 +6,11 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 01:38:58 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/04 01:52:41 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/04 03:33:05 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_strlen(char *str);
 
 // !linha
 int	*fill_linha_val4_2_stare_2(int **array)
@@ -115,19 +117,15 @@ int	*fill_linha_val4_2_stare_2(int **array)
 	while (array[linha])
 	{
 		if (array[linha][4] == 4)
-		{
 			array[linha][1] = 3;
-		}
 		if (array[linha][1] == 4)
-		{
 			array[linha][4] = 3;
-		}
 		linha++;
 	}
 }
 
 // !coluna
-int	*fill_coluna_val4_2_stare_3(int **array)
+int	*fill_coluna_val4_2_stare_2(int **array)
 {
 	int	coluna;
 	
@@ -135,13 +133,9 @@ int	*fill_coluna_val4_2_stare_3(int **array)
 	while (array[0][coluna])
 	{
 		if (array[4][coluna] == 4)
-		{
 			array[1][coluna] = 3;
-		}
 		if (array[1][coluna] == 4)
-		{
 			array[4][coluna] = 3;
-		}
 		coluna++;
 	}
 }
