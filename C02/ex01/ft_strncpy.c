@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:40:37 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/02 12:57:36 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:37:50 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }

@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 21:35:17 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/06 14:25:10 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/06 15:49:28 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/06 15:57:32 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 
-char	*ft_strcpy(char *dest, char *src);
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
 int	main(void)
 {
-	char dest[] = "failed";
+	char	*src = "| src";
+	char	dest[1000] = "dest |";
+	int		i;
 
-	printf("dest = %s\n", ft_strcpy(dest, "succes"));
-	printf("dest = %s\n", dest);
+	i = ft_strlcat(dest, src, 2);
+	printf("%d\n%s", i, dest);
 	return (0);
 }
-/* 
-int	main(void)
-{
-	char	*dest;
-
-	dest = (char *) malloc(15 * sizeof(char));
-	dest = ft_strcpy(dest, "test");
-	printf("%s\n", dest);
-	free(dest);
-	return (0);
-}
- */

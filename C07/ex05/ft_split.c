@@ -6,23 +6,11 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 21:53:50 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/04 05:11:37 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:54:05 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-void	free_splitted(char **splitted)
-{
-	int	i;
-
-	if (!splitted)
-		return ;
-	i = -1;
-	while (splitted[++i])
-		free(splitted[i]);
-	free(splitted);
-}
 
 int	ft_skip_or_find_c(char *str, char c, int i, int skip_or_find)
 {
@@ -64,7 +52,7 @@ char	**ft_splitter(char *str, char c, char **splitted)
 	return (splitted);
 }
 
-int	count_words(char *str, char c)
+int	count_words(char *str, char *charset)
 {
 	int	i;
 	int	word;
@@ -73,7 +61,7 @@ int	count_words(char *str, char c)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == charset[0])
 		{
 			i = ft_skip_or_find_c(str, c, i, 0);
 			word++;
@@ -84,14 +72,14 @@ int	count_words(char *str, char c)
 	return (word + 1);
 }
 
-char	**ft_split(char *str, char c)
+char	**ft_split(char *str, char *charset)
 {
 	char	**splitted;
 	int		nb_of_words;
 
 	if (!str)
 		return (NULL);
-	nb_of_words = count_words(str, c);
+	nb_of_words = count_words(str, charset);
 	splitted = (char **) malloc((nb_of_words + 1) * sizeof(char *));
 	if (!splitted)
 		return (NULL);

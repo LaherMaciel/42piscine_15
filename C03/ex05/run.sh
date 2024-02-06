@@ -1,5 +1,5 @@
 clear
-gcc -Wall -Wextra -Werror -fsanitize=address *.c && ./a.out
+gcc -Wall -Wextra -Werror *.c && ./a.out
 echo
 echo
 echo
