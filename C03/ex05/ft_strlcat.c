@@ -6,31 +6,36 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 22:07:49 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/31 20:28:05 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/07 00:27:10 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
 
 	i = 0;
-	while (dest[i])
+	while (str[i])
 		i++;
-	if (size <= i)
-	{
-		i = 0;
-		while (src[i])
-			i++;
-		return (i + size);
-	}
-	j = -1;
-	while (src[++j] && i < size - 1)
-	{
-		dest[i] = src[j];
-		i++;
-	}
-	dest[i] = '\0';
 	return (i);
+}
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	unsigned int	dest_size;
+	unsigned int	src_size;
+
+	dest_size = 0;
+	while (dest[dest_size])
+		dest_size++;
+	if (size - 1 < dest_size)
+		return (ft_strlen(src) + size);
+	src_size = -1;
+	while (src[++src_size] && dest_size < size - 1)
+	{
+		dest[dest_size] = src[src_size];
+		dest_size++;
+	}
+	dest[dest_size] = '\0';
+	return (ft_strlen(dest) + ft_strlen(src));
 }

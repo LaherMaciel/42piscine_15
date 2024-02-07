@@ -1,5 +1,5 @@
 clear
-gcc -Wall -Wextra -Werror *.c && ./a.out
+cc -Wall -Wextra -Werror *.c && ./a.out
 echo
 echo
 echo

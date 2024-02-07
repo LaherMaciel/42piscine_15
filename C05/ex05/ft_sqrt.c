@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:32:56 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 17:41:17 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:01:01 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	i;
-
+	long	i;
+	long	val;
+	
 	i = 0;
-	while ((i * i) <= nb)
+	val = nb;
+	while ((i * i) <= val)
 	{
-		if ((i * i) == nb)
+		if ((i * i) == val)
 			return (i);
 		i++;
 	}

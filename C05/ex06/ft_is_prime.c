@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:45:13 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 18:04:06 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:17:02 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
 	int	i;
-
+	
 	if (nb < 2)
 		return (0);
 	i = 2;
-	while ((i * i) <= nb)
+	while ((i * i) < nb)
 	{
 		if (nb % i == 0)
 			return (0);

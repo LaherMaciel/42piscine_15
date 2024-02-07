@@ -6,11 +6,21 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 20:29:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/05 16:58:11 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/06 17:37:45 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+char	**ft_swap(char **argv, int i, int j)
+{
+	char	*temp;
+
+	temp = argv[i];
+	argv[i] = argv[j];
+	argv[j] = temp;
+	return (argv);
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -36,13 +46,9 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	i = 0;
-	while (argv[++i])
-	{
-		j = -1;
-		while (argv[i][++j])
-			write(1, &argv[i][j], 1);
-		write(1, "\n", 1);
-	}
+	while (argv[++i] && argv[i + 1])
+		if (ft_strcmp(argv[i], argv[i + 1]) == 1)
+			argv = ft_swap(argv, i, (i + 1));
 	i = 0;
 	while (argv[++i])
 	{

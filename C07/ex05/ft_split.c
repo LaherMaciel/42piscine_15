@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 21:53:50 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/05 15:54:05 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/06 23:19:39 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,14 @@ int	count_words(char *str, char *charset)
 	int	word;
 
 	word = 0;
-	i = 0;
+	i = ft_skip_or_find_c(str, charset, i, 0);
+	if (str[i])
+		word = 1;
 	while (str[i])
 	{
 		if (str[i] == charset[0])
 		{
-			i = ft_skip_or_find_c(str, c, i, 0);
+			i = ft_skip_or_find_c(str, charset, i, 0);
 			word++;
 		}
 		else
@@ -72,7 +74,7 @@ int	count_words(char *str, char *charset)
 	return (word + 1);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char *str, char c)
 {
 	char	**splitted;
 	int		nb_of_words;
@@ -83,7 +85,7 @@ char	**ft_split(char *str, char *charset)
 	splitted = (char **) malloc((nb_of_words + 1) * sizeof(char *));
 	if (!splitted)
 		return (NULL);
-	splitted = ft_splitter(str, c, splitted);
+	splitted = ft_splitter(str, charset, splitted);
 	if (!splitted)
 		free(splitted);
 	return (splitted);
