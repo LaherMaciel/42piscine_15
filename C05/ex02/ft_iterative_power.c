@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:56:20 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 17:00:00 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/09 04:35:34 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_iterative_power(int nb, int power)
 		return (1);
 	i = -1;
 	val = nb;
-	while (++i < power)
+	while (++i < (power - 1))
 		nb *= val;
 	return (nb);
 }

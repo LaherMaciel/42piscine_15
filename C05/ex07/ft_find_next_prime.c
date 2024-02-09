@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 19:54:07 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 20:08:47 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/09 02:13:33 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
+long	ft_is_prime(long nb)
 {
-	int	i;
+	long	i;
 
 	if (nb < 2)
 		return (0);
@@ -28,16 +28,19 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	int	i;
-
-	if (nb <= 1)
+	long	i;
+	long	val;
+	
+	i = 0;
+	val = nb;
+	if (val <= 1)
 		return (2);
-	i = nb + 1;
+	i = val + 1;
 	while (1)
 	{
 		if (ft_is_prime(i) == 1)
 			return (i);
 		i++;
 	}
-	return (nb);
+	return (val);
 }

@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 23:53:48 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/31 00:16:22 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:13:54 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-char	**ft_split(char *str, char c);
-void	free_splitted(char **splitted);
+char	**ft_split(char *str, char *charset);
+
+void	free_splitted(char **splitted)
+{
+	int	i;
+
+	i = -1;
+	while (splitted[++i])
+		free(splitted[i]);
+	free(splitted);
+}
 
 int	main(void)
 {
 	char	**result;
 	char	*str;
-	char	delimiter;
+	char	*delimiter;
 	int		i;
 
-	str = ",,,,,,,,,,,,,,,,";
-	delimiter = ',';
+	str = "<Test>,/thing_+.my:function!@#$^&*()_+;probably[it]{works}";
+	delimiter = ",./?;:-_=+!@#$<>^&*( )[]{}";
 	result = ft_split(str, delimiter);
 	if (!result)
 	{

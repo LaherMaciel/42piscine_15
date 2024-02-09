@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 21:50:25 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/06 22:45:57 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:25:30 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char	*ft_strstr(char *str, char *to_find)
 	while (str[++i])
 	{
 		while (str[i + j] == to_find[j] && str[i + j])
+		{
 			j++;
-		if (to_find[j] == '\0')
-			return (str + i);
+			if (to_find[j] == '\0')
+				return (str + i);
+		}
 		j = 0;
 	}
-	return ("\0");
+	return (0);
 }

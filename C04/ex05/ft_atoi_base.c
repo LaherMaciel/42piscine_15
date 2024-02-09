@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:10:10 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/29 11:10:46 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/09 05:08:38 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ int	check_base(char *base)
 	int	i;
 
 	i = -1;
+	if (!base)
+		return (1);
 	while (base[++i])
 	{
 		if (base[i] == '-' || base[i] == '+' || base[i] == ' '
-			|| ft_strchar(base, base[i], i) == 1)
+			|| base[i] <= 13 || ft_strchar(base, base[i], i) == 1)
 			return (1);
 	}
 	if (i < 2)
@@ -48,23 +50,24 @@ int	ft_atoi_base(char *str, char *base)
 	int	i;
 	int	j;
 	int	val;
-	int	base_len;
+	int	sign;
 
 	i = 0;
 	val = 0;
-	base_len = check_base(base);
-	if (base_len == 1)
+	sign = 1;
+	if (check_base(base) == 1)
 		return (0);
-	while (str[i] <= 13)
+	while (str[i] <= 13 || str[i] == 32)
 		i++;
+	while (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			sign = sign * (-1);
 	while (str[i])
 	{
 		j = -1;
 		while (base[++j])
-		{
 			if (str[i] == base[j])
-				val = add_to_val(j, base_len, val);
-		}
+				val = add_to_val(j, check_base(base), val);
 		i++;
 	}
 	return (val);
