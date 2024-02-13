@@ -6,41 +6,33 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 19:54:07 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/09 02:13:33 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:18:48 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long	ft_is_prime(long nb)
+int	ft_is_prime(int nb)
 {
-	long	i;
+	int	i;
 
-	if (nb < 2)
+	if (nb == 2 || nb == 3)
+		return (1);
+	if (nb < 2 || nb % 2 == 0)
 		return (0);
-	i = 2;
-	while ((i * i) <= nb)
+	i = 3;
+	while (i < nb / i)
 	{
 		if (nb % i == 0)
 			return (0);
-		i++;
+		i += 2;
 	}
+	if (nb % i == 0)
+		return (0);
 	return (1);
 }
 
 int	ft_find_next_prime(int nb)
 {
-	long	i;
-	long	val;
-	
-	i = 0;
-	val = nb;
-	if (val <= 1)
-		return (2);
-	i = val + 1;
-	while (1)
-	{
-		if (ft_is_prime(i) == 1)
-			return (i);
-		i++;
-	}
-	return (val);
+	while (ft_is_prime(nb) == 0)
+		nb++;
+	return (nb);
 }

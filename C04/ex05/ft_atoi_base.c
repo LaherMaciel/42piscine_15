@@ -6,17 +6,15 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:10:10 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/09 05:08:38 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/11 00:40:15 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strchar(char *base, char c, int i)
 {
 	while (base[++i])
-	{
 		if (base[i] == c)
 			return (1);
-	}
 	return (0);
 }
 

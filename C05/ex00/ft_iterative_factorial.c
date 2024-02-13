@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:43:50 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/09 04:35:25 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/12 16:37:26 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_iterative_factorial(int nb)
 
 	if (nb < 0)
 		return (0);
+	if (nb == 0)
+		return (1);
 	i = nb;
 	while (--i > 0)
 		nb *= i;

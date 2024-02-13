@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 17:45:13 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/12 17:15:26 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/12 22:58:43 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/12 23:49:49 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int	ft_ultimate_range(int **range, int min, int max);
+
+int	main(void)
 {
+	int	*range;
+	int	size;
+	int	min;
+	int	max;
 	int	i;
 
-	if (nb == 2 || nb == 3)
-		return (1);
-	if (nb < 2 || nb % 2 == 0)
-		return (0);
-	i = 3;
-	while (i < nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i += 2;
-	}
-	if (nb % i == 0)
-		return (0);
-	return (1);
+	min = 0;
+	max = 10;
+	size = ft_ultimate_range(&range, min, max);
+	i = -1;
+	while (++i < size)
+		printf("%i\n", range[i]);
+	free(range);
+	return (0);
 }

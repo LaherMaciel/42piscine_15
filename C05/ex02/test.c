@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:04:14 by lawences          #+#    #+#             */
-/*   Updated: 2024/01/28 17:06:47 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:21:41 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_iterative_power(int nb, int power);
 
 int	main(void)
 {
-	printf("%i\n", ft_iterative_power(4, 4));
+	printf("%i\n", ft_iterative_power(4, 2));
 	return (0);
 }

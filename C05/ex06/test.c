@@ -6,20 +6,20 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:04:14 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/06 16:17:10 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/12 20:16:30 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <limits.h>
 
 int	ft_is_prime(int nb);
-
 int	main(void)
 {
 	int	i;
 
-	i = -1;
-	while (++i < 2000)
+	i = INT_MAX -1000;
+	while (++i < INT_MAX)
 	{
 		if (ft_is_prime(i) == 1 && i == 2)
 			printf("%i", i);

@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 17:45:13 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/12 17:15:26 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/12 19:00:54 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/12 19:06:08 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	int	i;
+#ifndef FT_H
+# define FT_H
 
-	if (nb == 2 || nb == 3)
-		return (1);
-	if (nb < 2 || nb % 2 == 0)
-		return (0);
-	i = 3;
-	while (i < nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i += 2;
-	}
-	if (nb % i == 0)
-		return (0);
-	return (1);
-}
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
+#endif

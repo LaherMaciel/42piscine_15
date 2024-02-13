@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 20:29:03 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/06 17:37:45 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/12 22:56:52 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,13 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	i = 0;
-	while (argv[++i] && argv[i + 1])
-		if (ft_strcmp(argv[i], argv[i + 1]) == 1)
-			argv = ft_swap(argv, i, (i + 1));
+	while (argv[++i])
+	{
+		j = -1;
+		while (argv[++j])
+			if (ft_strcmp(argv[i], argv[j]) == -1)
+				argv = ft_swap(argv, i, j);
+	}
 	i = 0;
 	while (argv[++i])
 	{
