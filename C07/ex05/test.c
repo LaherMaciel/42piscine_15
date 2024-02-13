@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 23:53:48 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/08 15:13:54 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:16:11 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	char	*delimiter;
 	int		i;
 
-	str = "<Test>,/thing_+.my:function!@#$^&*()_+;probably[it]{works}";
+	str = "<Test>,/thing_+.my:function!@#$^&*()_+;and[it]->{works}";
 	delimiter = ",./?;:-_=+!@#$<>^&*( )[]{}";
 	result = ft_split(str, delimiter);
 	if (!result)

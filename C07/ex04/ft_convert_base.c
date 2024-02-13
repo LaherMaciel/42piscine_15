@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:29:14 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/09 02:44:25 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:17:03 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@
 */
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	
+	return (nbr);
 }

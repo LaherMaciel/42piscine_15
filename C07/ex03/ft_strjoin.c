@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:29:40 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 00:56:17 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:10:25 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,20 +48,12 @@ char	*ft_join(char **strs, char *sep, char *join, int size)
 	{
 		j = 0;
 		while (strs[i][j])
-		{
-			join[k] = strs[i][j];
-			k++;
-			j++;
-		}
+			join[k++] = strs[i][j++];
 		if (i < size - 1 && strs[i + 1])
 		{
 			j = 0;
 			while (sep[j])
-			{
-				join[k] = sep[j];
-				k++;
-				j++;
-			}
+				join[k++] = sep[j++];
 		}
 		i++;
 	}

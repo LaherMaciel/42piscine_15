@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:29:17 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/08 15:29:18 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:18:33 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*to_stop_norm_warnings(char *nbr)
+{
+	return (nbr);
+}
