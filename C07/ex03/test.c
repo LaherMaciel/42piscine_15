@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:52:28 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 00:34:45 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 22:49:04 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int	main(void)
 	char	*str;
 	char	*strstr[5];
 
-	sep = " | ";
+	sep = "|";
 	strstr[0] = "test1";
-	strstr[1] = "test2";
-	strstr[2] = "test3";
-	strstr[3] = "test4";
+	strstr[1] = "";
+	strstr[2] = "saf";
+	strstr[3] = "daskjhf";
 	strstr[4] = NULL;
-	str = ft_strjoin(5, strstr, sep);
+	str = ft_strjoin(0, strstr, sep);
 	printf("%s", str);
 	free(str);
 	return (0);

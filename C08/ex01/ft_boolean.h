@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 22:29:08 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/14 21:52:56 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/13 18:04:49 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/13 21:13:57 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-void	ft_putnbr(int nb)
-{
-	int	i;
+# include <unistd.h>
+# define TRUE 1
+# define FALSE 0
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 0
+# define EVEN(val) (val % 2 == 0)
+# define t_bool _Bool
 
-	i = 0;
-	if (nb < 0)
-	{
-		write (1, "-", 1);
-		if (nb <= -2147483648)
-		{
-			write (1, "2", 1);
-			ft_putnbr(147483648);
-			return ;
-		}
-		nb = -nb;
-	}
-	if (nb < 10)
-	{
-		nb += 48;
-		write (1, &nb, 1);
-	}
-	else
-	{
-		ft_putnbr(nb / 10);
-		i = (nb % 10) + 48;
-		write (1, &i, 1);
-	}
-}
+#endif

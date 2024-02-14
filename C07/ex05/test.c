@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 23:53:48 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 16:16:11 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 23:03:14 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(void)
 	i = 0;
 	while (result[i])
 	{
-		printf("'%s'\n", result[i]);
+		printf("%s\n", result[i]);
 		i++;
 	}
 	free_splitted(result);

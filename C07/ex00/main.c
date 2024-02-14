@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 22:29:08 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/14 21:52:56 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/13 17:57:21 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/13 17:59:46 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void	ft_putnbr(int nb)
+char	*ft_strdup(char *src);
+
+int	main(void)
 {
-	int	i;
+	int		i;
+	char	*dest;
+	char	*src;
 
 	i = 0;
-	if (nb < 0)
-	{
-		write (1, "-", 1);
-		if (nb <= -2147483648)
-		{
-			write (1, "2", 1);
-			ft_putnbr(147483648);
-			return ;
-		}
-		nb = -nb;
-	}
-	if (nb < 10)
-	{
-		nb += 48;
-		write (1, &nb, 1);
-	}
-	else
-	{
-		ft_putnbr(nb / 10);
-		i = (nb % 10) + 48;
-		write (1, &i, 1);
-	}
+	src = "new info";
+	dest = ft_strdup(src);
+	printf("%s\n", dest);
+	free(dest);
+	return (0);
 }

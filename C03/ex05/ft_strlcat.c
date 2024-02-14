@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 22:07:49 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/08 15:27:51 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:37:40 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		dest_size++;
 	}
 	dest[dest_size] = '\0';
-	return (ft_strlen(dest) + ft_strlen(src));
+	return (ft_strlen(dest));
 }

@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:10:10 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/11 00:40:15 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/14 19:33:17 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,5 @@ int	ft_atoi_base(char *str, char *base)
 				val = add_to_val(j, check_base(base), val);
 		i++;
 	}
-	return (val);
+	return (val * sign);
 }

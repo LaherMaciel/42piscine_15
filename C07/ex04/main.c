@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 22:29:08 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/14 21:52:56 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/14 19:24:52 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/14 19:51:38 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-void	ft_putnbr(int nb)
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
+
+int	main(void)
 {
-	int	i;
+	char	*nbr;
 
-	i = 0;
-	if (nb < 0)
-	{
-		write (1, "-", 1);
-		if (nb <= -2147483648)
-		{
-			write (1, "2", 1);
-			ft_putnbr(147483648);
-			return ;
-		}
-		nb = -nb;
-	}
-	if (nb < 10)
-	{
-		nb += 48;
-		write (1, &nb, 1);
-	}
-	else
-	{
-		ft_putnbr(nb / 10);
-		i = (nb % 10) + 48;
-		write (1, &i, 1);
-	}
+	nbr = ft_convert_base("-10234", "0123456789", "01");
+	printf("%s\n\n", nbr);
+	free(nbr);
+	nbr = ft_convert_base("10234", "0123456789", "01");
+	printf("%s\n", nbr);
+	free(nbr);
+	return (0);
 }

@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 22:29:08 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/14 21:52:56 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/13 19:39:18 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/13 20:50:08 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-void	ft_putnbr(int nb)
+typedef struct	s_point
 {
-	int	i;
+	int	x;
+	int	y;
+}		t_point;
 
-	i = 0;
-	if (nb < 0)
-	{
-		write (1, "-", 1);
-		if (nb <= -2147483648)
-		{
-			write (1, "2", 1);
-			ft_putnbr(147483648);
-			return ;
-		}
-		nb = -nb;
-	}
-	if (nb < 10)
-	{
-		nb += 48;
-		write (1, &nb, 1);
-	}
-	else
-	{
-		ft_putnbr(nb / 10);
-		i = (nb % 10) + 48;
-		write (1, &i, 1);
-	}
-}
+#endif

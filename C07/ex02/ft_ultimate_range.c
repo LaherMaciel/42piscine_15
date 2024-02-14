@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 11:29:36 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 16:05:04 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 22:58:42 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,18 @@ int	ft_ultimate_range(int **range, int min, int max)
 	if (min >= max)
 	{
 		*range = NULL;
-		return (-1);
+		return (0);
 	}
 	*range = malloc((max - min) * sizeof(int));
 	if (!range)
 		return (-1);
-	i = min - 1;
+	i = min;
 	j = 0;
-	while (++i < max)
+	while (i < max)
 	{
 		(*range)[j] = i;
 		j++;
+		i++;
 	}
-	return (j);
+	return (max - min);
 }

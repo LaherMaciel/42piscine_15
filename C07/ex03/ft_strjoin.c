@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:29:40 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 16:10:25 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/13 22:57:50 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		join = malloc(sizeof(char));
 		if (!join)
 			return (NULL);
+		*join = '\0';
 		return (join);
 	}
 	join = malloc(find_sizeof_join(strs, sep, size) * sizeof(char));
