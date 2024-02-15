@@ -6,12 +6,11 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:29:17 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/14 20:16:48 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 02:59:22 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
 
 int	ft_strchar(char *base, char c, int i);
@@ -41,6 +40,11 @@ int	ft_count_size(long nbr, char *base, long i)
 
 char	*ft_itoa_base_recr(long nbr, char *base, long i, char *str)
 {
+	if (nbr < 0)
+	{
+		str[0] = '-';
+		nbr = -nbr;
+	}
 	if (nbr < ft_strlen(base))
 		str[i] = base[nbr];
 	else
@@ -56,6 +60,13 @@ char	*ft_itoa_base(int nbr, char *base)
 	int		len;
 	char	*str;
 
+	if (nbr == 0)
+	{
+		str = malloc (2 * sizeof(char));
+		str[0] = base[0];
+		str[1] = '\0';
+		return (str);
+	}
 	if (nbr < 0)
 		len = ft_count_size(-nbr, base, 0) + 1;
 	else
@@ -63,13 +74,7 @@ char	*ft_itoa_base(int nbr, char *base)
 	if (len != -1)
 	{
 		str = malloc ((len + 1) * sizeof(char));
-		if (nbr < 0)
-		{
-			str[0] = '-';
-			str = ft_itoa_base_recr(-nbr, base, len - 1, str);
-		}
-		else
-			str = ft_itoa_base_recr(nbr, base, len - 1, str);
+		str = ft_itoa_base_recr(nbr, base, len - 1, str);
 		str[len] = '\0';
 		return (str);
 	}

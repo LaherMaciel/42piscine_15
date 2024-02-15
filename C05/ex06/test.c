@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:04:14 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/12 20:16:30 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 02:24:00 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	main(void)
 {
 	int	i;
 
-	i = INT_MAX -1000;
-	while (++i < INT_MAX)
+	i = -100;
+	while (++i < 200)
 	{
 		if (ft_is_prime(i) == 1 && i == 2)
 			printf("%i", i);

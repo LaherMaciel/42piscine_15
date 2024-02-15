@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:11:02 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/12 17:57:16 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 04:14:06 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	check_base(char *base)
 
 	i = -1;
 	if (!base)
-		return (1);
+		return (-1);
 	while (base[++i])
 	{
 		if (base[i] == '-' || base[i] == '+' || base[i] == ' '

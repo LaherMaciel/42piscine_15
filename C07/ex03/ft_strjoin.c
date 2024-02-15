@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:29:40 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 22:57:50 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 03:31:38 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	join = malloc(find_sizeof_join(strs, sep, size) * sizeof(char));
 	if (!join)
 		return (NULL);
-	return (ft_join(strs, sep, join, size));
+	join = ft_join(strs, sep, join, size);
+	return (join);
 }
