@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:41:40 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/15 02:42:41 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:00:22 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	if (!my_struct)
 		return (NULL);
 	i = -1;
-	while (++i <= ac)
+	while (++i < ac)
 	{
 		my_struct[i].size = ft_strlen(av[i]);
 		my_struct[i].str = av[i];

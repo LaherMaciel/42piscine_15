@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 19:39:18 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/15 16:29:23 by lawences         ###   ########.fr       */
+/*   Created: 2024/02/15 16:16:58 by lawences          #+#    #+#             */
+/*   Updated: 2024/02/15 16:24:04 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#include "ft_stock_str.h"
 
-typedef struct s_point
+int	main(int ac, char **av)
 {
-	int	x;
-	int	y;
-}		t_point;
+	t_stock_str	*my_struct;
+	int			i;
 
-#endif
+	my_struct = ft_strs_to_tab(ac, av);
+	ft_show_tab(my_struct);
+	i = -1;
+	while (my_struct[++i].str)
+		free(my_struct[i].copy);
+	free(my_struct);
+	return (0);
+}

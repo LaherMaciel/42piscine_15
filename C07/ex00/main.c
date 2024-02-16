@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:57:21 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 17:59:46 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:49:49 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 	char	*src;
 
 	i = 0;
-	src = "new info";
+	src = "hello 42!";
 	dest = ft_strdup(src);
 	printf("%s\n", dest);
 	free(dest);

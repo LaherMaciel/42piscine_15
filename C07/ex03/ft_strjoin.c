@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:29:40 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/15 03:31:38 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 19:24:12 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	find_sizeof_join(char **strs, char *sep, int size)
 
 	i = -1;
 	size_of_join = 0;
-	while (strs[++i])
+	while (strs[++i] && i < size)
 	{
 		j = -1;
 		while (strs[i][++j])
@@ -44,7 +44,7 @@ char	*ft_join(char **strs, char *sep, char *join, int size)
 
 	i = 0;
 	k = 0;
-	while (strs[i])
+	while (strs[i] && i < size)
 	{
 		j = 0;
 		while (strs[i][j])

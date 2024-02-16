@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:29:14 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/15 03:39:32 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 19:27:42 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,15 +85,15 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	int	val;
 	int	i;
 
-	if (check_base(base_from) == -1 || check_base(base_to) == -1
-		|| !nbr || ft_strlen(nbr) == 0)
+	if (check_base(base_from) == -1 || check_base(base_to) == -1)
 		return (NULL);
 	i = 0;
 	while (nbr[i] && ft_strchar(base_from, nbr[i], -1) == -1)
 		i++;
 	if (!nbr[i])
-		return (NULL);
-	val = ft_atoi_base(nbr, base_from);
+		val = 0;
+	else
+		val = ft_atoi_base(nbr, base_from);
 	nbr = ft_itoa_base(val, base_to);
 	return (nbr);
 }

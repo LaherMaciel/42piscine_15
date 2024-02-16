@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 19:24:52 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/15 03:55:19 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 19:26:21 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	aux(void)
 {
 	char	*nbr;
 
-	nbr = ft_convert_base("12344", "0123456789", "0123456789");
+	nbr = ft_convert_base("", "0123456789", "ABCDefghijklmnopqrstuvwxyz");
 	printf("%s\n", nbr);
 	if (nbr)
 		free(nbr);
@@ -40,6 +40,10 @@ void	aux(void)
 	printf("%s\n", nbr);
 	if (nbr)
 		free(nbr);
+	nbr = ft_convert_base("\0", "0123456789", "0123456789");
+	printf("%s\n", nbr);
+	if (nbr)
+		free(nbr);
 }
 
 int	main(void)
@@ -51,10 +55,10 @@ int	main(void)
 	printf("%s\n", nbr);
 	if (nbr)
 		free(nbr);
-	nbr = ft_convert_base(NULL, "0123456789", "0123456789");
+	/* nbr = ft_convert_base(NULL, "0123456789", "0123456789");
 	printf("%s\n", nbr);
 	if (nbr)
-		free(nbr);
+		free(nbr);  */
 	nbr = ft_convert_base(" 4-------423-432-31-3312",
 			"0123456789", "0123456789");
 	printf("%s\n", nbr);

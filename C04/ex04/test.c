@@ -6,11 +6,12 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 23:32:25 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/12 17:54:19 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 22:28:53 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <limits.h>
 
 void	ft_putnbr_base(int nbr, char *base);
 
@@ -18,8 +19,8 @@ int	main(void)
 {
 	long	i;
 
-	i = -10;
-	while (i <= 100)
+	i = INT_MIN + 10;
+	while (i >= INT_MIN)
 	{
 		write(1, "bin	->	", 7);
 		ft_putnbr_base(i, "01");
@@ -32,7 +33,7 @@ int	main(void)
 		write(1, "\nhex	->	", 8);
 		ft_putnbr_base(i, "0123456789ABCDEF");
 		write(1, "\n\n\n", 3);
-		i++;
+		i--;
 	}
 	return (0);
 }

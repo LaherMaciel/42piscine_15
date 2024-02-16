@@ -6,13 +6,13 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:10:34 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 18:24:58 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 16:28:54 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_boolean.h"
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	while (*str)
 		write(1, str++, 1);

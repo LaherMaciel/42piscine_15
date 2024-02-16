@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 22:58:43 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 18:03:17 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:48:51 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	main(void)
 	int	max;
 	int	i;
 
-	min = 0;
-	max = 10;
+	min = 2;
+	max = 2000;
 	range = ft_range(min, max);
 	i = -1;
 	while (++i < (max - min))

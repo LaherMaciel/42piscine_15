@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 22:58:43 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 16:13:47 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:51:51 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ int	main(void)
 	int	max;
 	int	i;
 
-	min = 0;
-	max = 10;
+	min = 2;
+	max = 4;
 	size = ft_ultimate_range(&range, min, max);
 	i = -1;
+	printf("size = %i\n", size);
 	while (++i < size)
 		printf("%i\n", range[i]);
 	free(range);

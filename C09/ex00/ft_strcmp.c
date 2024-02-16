@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lawences <lawences@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 19:39:18 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/15 16:29:23 by lawences         ###   ########.fr       */
+/*   Created: 2024/01/27 13:38:42 by lawences          #+#    #+#             */
+/*   Updated: 2024/01/30 21:24:19 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
-
-typedef struct s_point
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	x;
-	int	y;
-}		t_point;
+	int	i;
 
-#endif
+	i = 0;
+	while (s2[i] || s1[i])
+	{
+		if (s1[i] < s2[i])
+			return (-1);
+		if (s1[i] > s2[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}

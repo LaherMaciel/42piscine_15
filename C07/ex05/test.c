@@ -6,7 +6,7 @@
 /*   By: lawences <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 23:53:48 by lawences          #+#    #+#             */
-/*   Updated: 2024/02/13 23:03:14 by lawences         ###   ########.fr       */
+/*   Updated: 2024/02/15 19:27:16 by lawences         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	char	*delimiter;
 	int		i;
 
-	str = "<Test>,/thing_+.my:function!@#$^&*()_+;and[it]->{works}";
+	str = "<Test>,/this_+.:function!@#$^&*()_+;and[it]->{works}";
 	delimiter = ",./?;:-_=+!@#$<>^&*( )[]{}";
 	result = ft_split(str, delimiter);
 	if (!result)
@@ -40,12 +40,9 @@ int	main(void)
 		printf("Memory allocation failed.\n");
 		return (1);
 	}
-	i = 0;
-	while (result[i])
-	{
+	i = -1;
+	while (result[++i])
 		printf("%s\n", result[i]);
-		i++;
-	}
 	free_splitted(result);
 	return (0);
 }
